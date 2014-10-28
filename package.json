@@ -1,0 +1,19 @@
+{
+  "name": "iptgen",
+  "version": "0.0.1",
+  "description": "An iptables generator using nodeJS",
+  "main": "./app.js",
+  "keywords": [
+    "iptables",
+    "firewall",
+    "linux"
+  ],
+  "author": "LoadLow",
+  "license": "MIT",
+  "engine": {
+    "node": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+}
