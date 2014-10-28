@@ -11,7 +11,7 @@ iptgen
 ### Lists ###
 U can add news ip lists on the /lists folder, with the .list extension.
 
-###  Exemples of codes ###``
+###  Exemples of codes ###
 A complete code example is stored on ./app.js
 
 Includes the generator
