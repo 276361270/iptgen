@@ -77,3 +77,114 @@ Exports on /dist
 ```javascript
 iptgen.exportFile("iptables.sh");
 ```
+
+All "rule" functions
+
+```javascript
+/*
+ * Save the rule
+ */
+    this.saveRule = function();
+
+/*
+ * Targets
+ */
+    this.target = function(chain);
+    this.allow = function();
+    this.drop = function();
+    this.reject = function();
+
+    /*
+        REJECTS = {
+            TCP_RESET : "tcp-reset",
+            ICMP_PORT_UNREACHABLE : "icmp-port-unreachable",
+            ICMP_NET_UNREACHABLE : "icmp-net-unreachable",
+            ICMP_HOST_UNREACHABLE : "icmp-host-unreachable",
+            ICMP_PROTO_UNREACHABLE : "icmp-proto-unreachable",
+            ICMP_NET_PROHIBITED : "icmp-net-prohibited",
+            ICMP_HOST_PROHIBITED : "icmp-host-prohibited"
+        };
+    */
+    this.rejectWith = function(rwith);
+    this.return = function();
+
+/*
+ * Actions
+ */
+    this.append = function();
+    this.insert = function();
+    this.delete = function();
+
+/*
+ * Protocol
+ */
+    this.protocol = function(protocol);
+    this.tcp = function();
+    this.udp = function();
+    this.udpFragmented = function();
+    this.icmp = function();
+
+/*
+ * Origin-matching
+ */
+    this.src_addr = function(ip);
+    this.src_port = function(port);
+    this.src_ports = function(ports);
+    this.src = function(ip, port);
+
+/*
+ * Destination-matching
+ */
+    this.dst_addr = function(ip);
+    this.dst_port = function(port);
+    this.dst_ports = function(ports);
+    this.dst = function(ip, port);
+
+/*
+ * Interface-matching
+ */
+    this.in = function(iface);
+    this.out = function(iface);
+
+/*
+ * Modules
+ */
+
+    /*
+        PKTTYPES = {
+            MULTICAST : "multicast",
+            BROADCAST : "broadcast"
+        };
+    */
+    
+    this.m_pkttype = function(type);
+
+    /*
+        STATES = {
+            CONNECTED : "ESTABLISHED,RELATED",
+            NEW : "NEW",
+            UNTRACKED : "UNTRACKED",
+            INVALID : "INVALID"
+        };
+    */
+
+    this.m_state = function(states);
+
+    this.m_connlimit = function(max);
+    this.m_connflood = function(interval, hits);
+
+    /*
+        example packet_options: {str: "hello", from: 0, to: 5}
+    */
+    this.m_match_string = function(packet_options);
+
+    /*
+        example packet_options: {hex: "00 59", from: 54, to: 55}
+    */
+    this.m_match_hex = function(packet_options);
+
+    this.has_token = function(name, timeout);
+    this.set_token = function(name, isDest);
+
+    this.module = function(modOpts);
+```
