@@ -78,7 +78,7 @@ Exports on /dist
 iptgen.exportFile("iptables.sh");
 ```
 
-All "rule" functions
+### All "rule" functions ### 
 
 ```javascript
 /*
