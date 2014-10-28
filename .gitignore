@@ -1,0 +1,10 @@
+# Build and Release Folders
+dist/
+
+# Other files and folders
+.settings/
+.idea/
+*.userlibraries
+
+#npm
+node_modules/
