@@ -174,7 +174,7 @@ All "rule" functions
     this.m_connflood = function(interval, hits);
 
     /*
-        example packet_options: {str: "hello", from: 0, to: 5}
+        example packet_options: {str: "hello", from: 0, to: 4}
     */
     this.m_match_string = function(packet_options);
 
